@@ -6,10 +6,12 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/yenpu-upyoung/myupconfig-service.git
+          uri: https://github.com/yenpu-upyoung/wupconfig.git
           username: ${GIT_USER}
           password: ${GIT_PWD}
           default-label: master
+          repos:
+            user: https://github.com/yenpu-upyoung/appconf.git:wq!
     gcp:
       logging:
         enabled: true

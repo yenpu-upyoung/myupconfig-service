@@ -11,7 +11,7 @@ spring:
           password: ${GIT_PWD}
           default-label: master
           repos:
-            user: https://github.com/yenpu-upyoung/appconf.git:wq!
+            user: https://github.com/yenpu-upyoung/appconf.git
     gcp:
       logging:
         enabled: true

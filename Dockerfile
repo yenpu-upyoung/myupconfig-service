@@ -27,10 +27,10 @@ COPY --from=docker.elastic.co/observability/apm-agent-java:1.37.0 /usr/agent/ela
 #CMD ["java", "-jar", "/myupconfig.jar"]
 CMD java \
     -javaagent:/elastic-apm-agent.jar  \
-    -Delastic.apm.service_name=config-client \
+    -Delastic.apm.service_name=config-server \
     -Delastic.apm.secret_token=${APM_TOKEN} \
     -Delastic.apm.server_url=${APM_SERVER} \
     -Delastic.apm.environment=test \
-    -Delastic.apm.application_packages=com.example.myupconfigclient \
+    -Delastic.apm.application_packages=com.example.myupconfig \
     -Dspring.profiles.active=${APM_PROF} \
     -jar /myupconfig.jar
